@@ -1,10 +1,8 @@
 const { Sequelize, DataTypes } = require("sequelize");
-const Database = require("better-sqlite3");
 
 const sequelize = new Sequelize({
   dialect: "sqlite",
   storage: "./database.sqlite",
-  dialectModule: Database
 });
 
 const Item = sequelize.define("Item", {
